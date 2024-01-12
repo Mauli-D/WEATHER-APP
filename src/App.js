@@ -13,14 +13,11 @@ function App() {
 		>
 			<TopButtons />
 			<Inputs />
-
 			<div>
 				<TimeAndLocation />
 				<TemperatureAndDetails />
-
 				<Forecast />
 			</div>
-
 		</div>
 	);
 }
