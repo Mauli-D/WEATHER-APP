@@ -1,6 +1,4 @@
 import React from "react";
-import { iconUrlFromCode } from "../services/weatherService";
-
 function Forecast() {
 
 	const hourly = [
@@ -58,7 +56,9 @@ function Forecast() {
 			"icon": "03d"
 		}
 	]
-
+	const iconUrlFromCode = (code) =>
+		`http://openweathermap.org/img/wn/${code}@2x.png`;
+  
 	return (
 		<div>
 			<div className="flex items-center justify-start mt-6">
