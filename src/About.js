@@ -41,34 +41,33 @@ const About = () => {
           <img src={teamMember1Image} alt="Maulin Desai" className="team-member-image" />
           <div className="team-member-details">
             <h3>Maulin Desai</h3>
-            <p>Lead Developer</p>
+            <p>Software Engineer</p>
           </div>
         </div>
 
         <div className="team-member">
-          <img src={teamMember2Image} alt="Dwiti Desai" className="team-member-image" />
+          <img src={teamMember2Image} alt="Aryan Patel" className="team-member-image" />
           <div className="team-member-details">
-            <h3>Dwiti Desai</h3>
-            <p>Weather Specialist</p>
+            <h3>Aryan Patel</h3>
+            <p>Software Engineer</p>
           </div>
         </div>
 
         <div className="team-member">
-          <img src={teamMember3Image} alt="Dwiti Desai" className="team-member-image" />
+          <img src={teamMember3Image} alt="Makwana Tirthsingh" className="team-member-image" />
           <div className="team-member-details">
-            <h3>Dwiti Desai</h3>
-            <p>Weather Specialist</p>
+            <h3>Makwana Tirthsingh</h3>
+            <p>Software Engineer</p>
           </div>
         </div>
 
         <div className="team-member">
-          <img src={teamMember4Image} alt="Dwiti Desai" className="team-member-image" />
+          <img src={teamMember4Image} alt="Krima Bhatt" className="team-member-image" />
           <div className="team-member-details">
-            <h3>Dwiti Desai</h3>
-            <p>Weather Specialist</p>
+            <h3>Krima Bhatt</h3>
+            <p>Software Engineer</p>
           </div>
         </div>
-        {/* Add more team members as needed */}
       </div>
     </div>
   );
