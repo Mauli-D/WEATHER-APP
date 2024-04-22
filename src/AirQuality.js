@@ -34,7 +34,7 @@ const AirQuality = ({setQuery, query, units, setUnits}) => {
   return (
     <div>
       <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} city={city} units={units} setUnits={setUnits} setCity={city}/>
+      <Inputs setQuery={setQuery} city={city} units={units} setUnits={setUnits} setCity={city} airQuality={true}/>
       {airQuality && (
         <div>
           <TimeAndLocation weather={airQuality} />
