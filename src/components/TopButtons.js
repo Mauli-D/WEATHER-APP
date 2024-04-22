@@ -1,29 +1,28 @@
 import React from "react";
 
-// todo
-function TopButtons() {
-	// const cities = [
-	//   {
-	//     id: 1,
-	//     title: "Ahemdabad",
-	//   },
-	//   {
-	//     id: 2,
-	//     title: "Mumbai",
-	//   },
-	//   {
-	//     id: 3,
-	//     title: "Bengaluru",
-	//   },
-	//   {
-	//     id: 4,
-	//     title: "Manhattan",
-	//   },
-	// ];
+function TopButtons({ setQuery }) {
+  const cities = [
+    {
+      id: 1,
+      title: "Ahmedabad",
+    },
+    {
+      id: 2,
+      title: "Mumbai",
+    },
+    {
+      id: 3,
+      title: "Bengaluru",
+    },
+    {
+      id: 4,
+      title: "Mahesana",
+    },
+  ];
 
-	return (
-		<div className="flex items-center justify-around my-6">
-			{/* {cities.map((city) => (
+  return (
+    <div className="flex items-center justify-around my-6">
+      {cities.map((city) => (
         <button
           key={city.id}
           className="text-lg font-medium text-white"
@@ -31,9 +30,9 @@ function TopButtons() {
         >
           {city.title}
         </button>
-      ))} */}
-		</div>
-	);
+      ))}
+    </div>
+  );
 }
 
 export default TopButtons;
