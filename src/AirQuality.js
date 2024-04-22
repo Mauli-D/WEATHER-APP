@@ -10,10 +10,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-const AirQuality = () => {
-    const [query, setQuery] = useState({ q: "Ahmedabad" });
-    const [units, setUnits] = useState("metric");
+const AirQuality = ({setQuery, query, units, setUnits}) => {
     const [airQuality, setAirQuality] = useState(null);
+    const [city, setCity] = useState("");
 
   useEffect(() => {
     const fetchAirQuality = async () => {
@@ -35,7 +34,7 @@ const AirQuality = () => {
   return (
     <div>
       <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} />
+      <Inputs setQuery={setQuery} city={city} units={units} setUnits={setUnits} setCity={city}/>
       {airQuality && (
         <div>
           <TimeAndLocation weather={airQuality} />

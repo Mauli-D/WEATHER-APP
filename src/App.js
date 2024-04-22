@@ -23,9 +23,7 @@ function WeatherContent({ weather }) {
   );
 }
 
-function Home({ setQuery, units, query }) {
-
-  const [weather, setWeather] = useState(null);
+function Home({ units, query, setWeather, setQuery, weather, setUnits}) {
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -47,7 +45,7 @@ function Home({ setQuery, units, query }) {
   return (
     <div>
       <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} />
+      <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
       {weather && <WeatherContent weather={weather} />}
     </div>
   );
@@ -80,9 +78,9 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home setQuery={setQuery} units={units} query={query} />}
+            element={<Home setQuery={setQuery} units={units} query={query} setUnits={setUnits} weather={weather} setWeather={setWeather} />}
           />
-          <Route path="/air_quality" element={<AirQuality />} />
+          <Route path="/air_quality" element={<AirQuality setQuery={setQuery} query={query} units={units} setUnits={setUnits} />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
