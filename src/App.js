@@ -45,7 +45,7 @@ function Home({ units, query, setWeather, setQuery, weather, setUnits}) {
   return (
     <div>
       <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
+      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} airQuality={false}/>
       {weather && <WeatherContent weather={weather} />}
     </div>
   );

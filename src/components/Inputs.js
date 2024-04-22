@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import { toast } from "react-toastify";
 
-function Inputs({ setQuery, units, setUnits }) {
+function Inputs({ setQuery, units, setUnits, airQuality }) {
   const [city, setCity] = useState("");
 
   const handleUnitsChange = (e) => {
@@ -53,7 +53,7 @@ function Inputs({ setQuery, units, setUnits }) {
         />
       </div>
 
-      <div className="flex flex-row w-1/3 items-center justify-center">
+      {!airQuality ? <div className="flex flex-row w-1/3 items-center justify-center">
         <button
           name="metric"
           className="text-xl text-white font-light transition ease-out hover:scale-125"
@@ -69,7 +69,7 @@ function Inputs({ setQuery, units, setUnits }) {
         >
           °F
         </button>
-      </div>
+      </div> : ''}
     </div>
   );
 }
